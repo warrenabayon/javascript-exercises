@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arguments</title>
+</head>
+<body>
+    
+    <script>
+    /*
+    function longestString() {
+        let longest = "";
+        console.log(longest.length);
+        for (let i = 0; i < arguments.length; i++) {
+            if (arguments[i].length > longest.length) {
+                longest = arguments[i];
+            }
+        }
+        console.log(arguments.length);
+        return longest;
+    }   
+
+    console.log(longestString('test1', 'test22', 'test333',"I'm the longest"));
+
+    */
+    ///
+
+    /*
+
+    function updatingArgs (a){
+        arguments[0] = '100'; //updated the arguments value;
+        console.log(a)
+    }
+    updatingArgs(20);
+
+
+    function updatingArgs2 (a) {
+        a = 50; // updating the arguments
+        console.log(a);
+    }
+    updatingArgs2(60);
+
+    function updatingArgs3 (a = 55){
+        console.log(arguments[0]); // kasi wala namang nilagay doon sa
+        console.log(arguments.length);
+    }
+
+    updatingArgs3();
+
+
+    function midpoint() {
+  return (
+            (Math.min.apply(null, arguments) + Math.max.apply(null, arguments)) / 2 /// get the min and max of the arguments the devide it to 2
+        );
+        }
+
+    console.log(midpoint(3, 1, 4, 1, 5)); // 3
+
+
+    function myConcat(separator) {
+        const args = Array.prototype.slice.call(arguments, 1);
+        return args.join(separator);
+    }
+
+// console.log( myConcat(", ", "red", "orange", "blue"));
+// // "red, orange, blue"
+
+// myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+// // "elephant; giraffe; lion; cheetah"
+
+// myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+// // "sage. basil. oregano. pepper. parsley"
+
+
+function list(type) {
+  let html = `<${type}l><li>`;
+  const args = Array.prototype.slice.call(arguments, 1);
+  html += args.join("</li><li>");
+  html += `</li></${type}l>`; // end list
+  return html;
+}
+
+
+list("u", "One", "Two", "Three");
+*/
+
+/*
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+
+*/
+
+
+/*
+function myFun(a, b, c, ...manyMoreArgs) {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("c", c);
+  console.log("manyMoreArgs", manyMoreArgs);
+    console.log(arguments.length);
+    console.log(manyMoreArgs.length)
+
+}
+
+myFun("one", "two", "three", "four", "five", "six");
+*/
+
+
+
+
+const removeFromArray = function() {
+    const argumentArray = arguments[0];
+
+    for (i = 1; i < arguments.length; i++){
+        const argumentValue = arguments[i]
+        //console.log(argumentValue);// check the argument value
+        const argumentIndex = arguments[0].indexOf(argumentValue);
+
+        //console.log(argumentIndex)// check the index
+        
+
+        if (argumentIndex !== -1){
+            console.log("okay")
+            const argumentArray = arguments[0].splice(argumentIndex, 1);
+        } else {
+            console.log('no');
+        }
+    }
+    
+    return argumentArray;
+
+    
+};
+
+console.log(removeFromArray([1, 2, 3, 4], 3, 4, 'none'));
+
+
+
+///remove item in the arguments 0
+///loop using the argments leng start on 1
+
+
+// let myArray = [1, 2, 3, 4, 5];
+// let searchElement = 3;
+
+// let index = myArray.indexOf(searchElement);
+
+// if (index !== -1) {
+//     console.log(`Element ${searchElement} found at index ${index}`);
+// } else {
+//     console.log(`Element ${searchElement} not found in the array`);
+// }
+// console.log(myArray);
+// console.log(myArray.splice(index, 1))
+// console.log(myArray);
+
+    </script>
+</body>
+</html>
