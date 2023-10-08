@@ -119,7 +119,7 @@ myFun("one", "two", "three", "four", "five", "six");
 
 
 
-
+/*
 const removeFromArray = function() {
     const argumentArray = arguments[0];
 
@@ -146,25 +146,65 @@ const removeFromArray = function() {
 
 console.log(removeFromArray([1, 2, 3, 4], 3, 4, 'none'));
 
+*/
+
+//solution v2
+
+/*
+const removeFromArray = (argumentNum, ...argumentArray) => {
+    console.log(argumentNum);
+    // const removeItem = argumentNum.splice(1,1);
+    // console.log(argumentNum);
+    // console.log(removeItem);
+
+    for (i = 0; i < argumentArray.length; i++) {
+        // console.log('test value: ' + argumentArray[i]);
+        
+        const indexToRemove = argumentNum.indexOf(argumentArray[i]);       
+        console.log(indexToRemove +" - "+ argumentArray[i]);
+
+        if (indexToRemove !== -1) { //  reverse
+            const removeItem = argumentNum.splice(indexToRemove,1)
+        }    
+        
+    }
+
+  
+   return argumentNum;
+
+}
 
 
-///remove item in the arguments 0
-///loop using the argments leng start on 1
+console.log(removeFromArray([1, 2, 3, 4], '', 1, 'test'));
 
 
-// let myArray = [1, 2, 3, 4, 5];
-// let searchElement = 3;
+*/
 
-// let index = myArray.indexOf(searchElement);
 
-// if (index !== -1) {
-//     console.log(`Element ${searchElement} found at index ${index}`);
-// } else {
-//     console.log(`Element ${searchElement} not found in the array`);
-// }
-// console.log(myArray);
-// console.log(myArray.splice(index, 1))
-// console.log(myArray);
+
+const GFG_Fun = (textGroup, ...textToRemove) => {
+    
+    // console.log(textGroup);
+    // console.log(textToRemove);
+
+    //loop
+    for (i = 0; i < textToRemove.length; i++){
+ 
+        if (textToRemove[i] >! textToRemove.length) {
+            const result = textGroup.splice(textToRemove[i], 1);
+        }
+        
+    }
+
+    return textGroup;
+}
+ 
+
+
+
+console.log( GFG_Fun(['Geeks', 'GFG', 'Geek', 'GeeksForGeeks'], 3, 2 ,9));
+
+
 
     </script>
 </body>

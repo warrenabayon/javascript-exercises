@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const sumAll = function(startNumber, endNumber) {
+
+            /*
+            takes 2 number ... star number and end number like 1-4
+            sum the number 1 + between + 4 to get the total 10
+
+            try using a loop 1 to 4 then add each 
+
+            */
+
+            let firstNum = startNumber;
+            let secondNumber = endNumber;
+            let sum = 0;
+
+            // console.log(typeof(firstNum));
+
+           
+
+            if (startNumber < 0 || endNumber < 0 
+                                || typeof(firstNum) !== 'number' 
+                                || typeof(secondNumber) !== 'number') {
+                sum = 'ERROR';
+                
+            } else {
+
+                if (startNumber > endNumber) {
+                firstNum = endNumber;
+                secondNumber = startNumber;
+                }
+
+                for (i = firstNum; i <= secondNumber; i++) {
+                    
+                    sum += i;
+                
+                                    
+                }         
+
+            }
+
+            return sum;
+
+           
+
+        };
+
+       console.log(sumAll(1, 4));
+
+    </script>
+    
+</body>
+</html>
