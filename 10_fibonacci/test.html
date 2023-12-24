@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="">
+<style>
+
+</style>
+<body>
+
+  <script>
+
+const fibonacci = function(num) {
+
+  let n1 = 0, n2 = 1, sum;
+  
+  for (i = 0 ; i < num; i++) {
+    
+    sum = n1 + n2; //get the sum = 1
+    n1 =  n2; // n1 = 1 //so on loop this wil become sum = 1 + 1 = 2
+    n2 = sum; // here n2 becomes 2
+  
+    // console.log(n1);
+  }
+  
+
+  return num < 0 ? 'OOPS' : n1 ;
+
+};
+
+console.log(fibonacci(1))
+
+  </script>
+  
+</body>
+</html>
