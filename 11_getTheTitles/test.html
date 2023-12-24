@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+
+const books = [
+  {
+    title: 'Book',
+    author: 'Name'
+  },
+  {
+    title: 'Book2',
+    author: 'Name2'
+  }
+]
+
+const getTheTitles = (books) => {
+  return books.map((item, index, arr) => item.title.includes('2') ? 'yes' : item['title']);
+  
+}
+
+
+console.log(getTheTitles(books)); // ['Book','Book2']
+
+
+  </script>
+</body>
+</html>
